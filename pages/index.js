@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import { Comp } from '@components/component'; 
 
 const Home = () => (
   <div className="container">
@@ -6,7 +7,7 @@ const Home = () => (
       <title>Create Next App</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
+  <Comp />
     <main>
       <h1 className="title">
         Welcome to <a href="https://nextjs.org">Next.js!</a>
