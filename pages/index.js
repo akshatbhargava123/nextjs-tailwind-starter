@@ -1,11 +1,15 @@
+import dynamic from 'next/dynamic';
 import Page from '@components/common/page';
 
-const Home = () => (
+const HomeComponent = dynamic(
+  () => import('../components/home').then(mod => mod.default),
+  { ssr: false }
+);
+
+const HomePage = () => (
   <Page title="Home">
-    {() => (
-      <h1 className="font-black text-4xl flex justify-center">Welcome to Juno Pact</h1>
-    )}
+    {() => <HomeComponent />}
   </Page>
 );
 
-export default Home;
+export default HomePage;

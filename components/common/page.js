@@ -1,10 +1,8 @@
 import Head from 'next/head';
-import { client } from '@lib/init-apollo';
-import { ApolloProvider } from '@apollo/react-hooks';
 
 const Page = ({ title, children }) => {
 	return (
-		<ApolloProvider client={client}>
+		<div>
 			<Head>
 				<title>{title} - JunoPact</title>
 				<link rel="icon" href="/favicon.ico" />
@@ -23,7 +21,7 @@ const Page = ({ title, children }) => {
 			<div>
 				{children()}
 			</div>
-		</ApolloProvider>
+		</div>
 	);
 };
 
